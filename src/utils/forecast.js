@@ -1,5 +1,6 @@
 const request = require("request");
-const openweatherKey = process.env.openweatherKey|||| require("../../key").openweatherKey;
+const openweatherKey =
+  process.env.openweatherKey || require("../../key").openweatherKey;
 
 module.exports = forecast = (longitude, latitude, callback) => {
   const openWeatherURL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${openweatherKey}`;

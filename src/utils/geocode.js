@@ -1,5 +1,7 @@
 const request = require("request");
-const mapboxKey = process.env.mapboxKey;
+const { mapboxKey } = require("../../key");
+// const mapboxKey = process.env.mapboxKey;
+
 module.exports = geocode = (address, callback) => {
   const geocodeURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     address
